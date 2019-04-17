@@ -1,32 +1,59 @@
-{% load static %}
-<html>
-    <head>
-        <title>Django Girls blog</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    </head>
-    <body>
-        <div class="page-header">
-            <h1><a href="/">New Post</a></h1>
-       </div>
+{% extends 'blog/base.html' %}
 
-        <div class="content container">
-    <div class="row">
-        <div class="col-md-8">
-            {% for post in posts %}
-                <div class="post">
-                    <div class="date">
-                        <p>Опубликовано: {{ post.published_date }}</p>
-                    </div>
-                    <h1><a href="">{{ post.title }}</a></h1>
-                    <p>{{ post.text_1|linebreaksbr }}</p>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
+{% block content %}
+    {% for post in page_object.object_list %}
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+            {% autoescape off %}
+            <h1 class="title_style"><a href="{{ post.get_absolute_url }}"><i class="fa fa-pull-left fa-paper-plane-o" aria-hidden="true"></i>
+                {{ post.title }}</a></h1>
 
-    </body>
-</html>
+                <h6>
+                    <b>Дата:</b>
+                        <span><em class="from_to">{{ post.from_to }}</em></span>
+                </h6>
+
+            <p class="lead">{{ post.text_1|linebreaksbr|truncatewords:25|urlize }}</p>
+            {% endautoescape %}
+        </div><hr class="style17">
+
+    {% endfor %}
+
+<!-- Подписка на рассылку новостей. Начало -->
+<!-- Карточка с шапкой и футером -->
+{% include 'subscription_link.html' %}
+<!-- Конец карточки -->
+<!-- Подписка на рассылку новостей. Конец -->
+
+<!-- Пагинатор, начало! {% if in_paginated %} {% endif %} -->
+<br>
+<nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item {% if not prev_url %} disabled {% endif %}">
+      <a class="page-link" href="{{ prev_url }}" tabindex="-1" aria-disabled="true">Previous</a>
+    </li>
+
+    {% for n in page_object.paginator.page_range %}
+      {% if page_object.number == n %}
+          <li class="page-item active" aria-current="page">
+              <a class="page-link" href="?page={{ n }}">{{ n }}<span class="sr-only">(current)</span></a>
+          </li>
+      {% elif n > page_object.number|add:-3 and n < page_object.number|add:3 %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ n }}">{{ n }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+    <li class="page-item {% if not next_url %} disabled {% endif %}">
+      <a class="page-link" href="{{ next_url }}" tabindex="-1" aria-disabled="true">Next</a>
+    </li>
+
+  </ul>
+</nav>
+
+<!-- Пагинатори, конец! -->
+
+
+{% endblock %}
