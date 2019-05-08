@@ -10,6 +10,7 @@ urlpatterns = [
     path('', views.post_list, name='post_list'),
     path('post/<str:slug>/', views.post_detail, name='post_detail'),
     path('subscription/', views.subscription, name='subscription'),
+    path('kback/', views.kback, name='kback'),
 
 
 ]

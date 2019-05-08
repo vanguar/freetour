@@ -51,6 +51,10 @@ def post_detail(request, slug):
     return render(request, 'blog/post_detail.html', context={'post': post})
 
 
+def kback(request):
+    return render(request, 'blog/kback.html', locals())
+
+
 def subscription(request):
 
     if request.method == 'POST':
