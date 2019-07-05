@@ -54,6 +54,11 @@ def post_detail(request, slug):
 def kback(request):
     return render(request, 'blog/kback.html', locals())
 
+def fulllist(request):
+    posts = Post.objects.all()
+    return render(request, 'blog/fulllist.html', context={'posts': posts})
+
+
 
 def subscription(request):
 

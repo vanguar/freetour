@@ -24,8 +24,7 @@
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
- 
+font-family: 'Old Standard TT', serif;
 }
 
 .date {
@@ -58,9 +57,14 @@ h1, h2, h3, h4 {
    color: black;
 }
 
-.post h1 a:hover {
+.post h4 a:hover {
   color: #DC143C;
   text-decoration: none;
+}
+
+.post h4 a {
+color:black;
+font-weight: bolder;
 }
 
 .sticky {
@@ -231,4 +235,24 @@ left:50px;
 
 .indent {
 top: 10px;
+}
+
+
+.usefullinks a {
+color: black;
+text-decoration: none;
+font-weight: bold;
+}
+
+.usefullinks a:hover {
+color: #DC143C;
+text-decoration: none;
+}
+
+.navbar-collapse{
+ justify-content: flex-end;
+}
+
+.badge {
+ margin: 5px;
 }

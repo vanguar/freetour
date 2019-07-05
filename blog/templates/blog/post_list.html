@@ -7,20 +7,24 @@
                 {{ post.published_date }}
             </div>
             {% autoescape off %}
-            <h1 class="title_style"><a href="{{ post.get_absolute_url }}"><i class="fa fa-pull-left fa-paper-plane-o" aria-hidden="true"></i>
-                {{ post.title }}</a></h1>
+            <h4 class="t_style"><a href="{{ post.get_absolute_url }}"><i class="fa fa-pull-left fa-paper-plane-o" aria-hidden="true"></i>
+                {{ post.title }}</a></h4>
 
                 <h6>
                     <b>Дата:</b>
                         <span><em class="from_to">{{ post.from_to }}</em></span>
                 </h6>
 
-            <p class="lead">{{ post.text_1|linebreaksbr|truncatewords:25|urlize }}</p>
+            <p class="lead">{{ post.text_1|linebreaksbr|truncatewords:25 }}</p>
             {% endautoescape %}
-        </div><hr class="style17">
+        </div>
 
     {% endfor %}
 
+<div class="alert alert-success" role="alert">
+  Хотите посмотреть <a href="{% url 'fulllist' %}" class="alert-link"><i class="fa fa-link" aria-hidden="true"></i> весь список постов?</a> Просто перейдите по ссылке!
+</div>
+<hr class="style17">
 <!-- Подписка на рассылку новостей. Начало -->
 <!-- Карточка с шапкой и футером -->
 {% include 'subscription_link.html' %}

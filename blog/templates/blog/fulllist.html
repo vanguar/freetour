@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
+<span class="badge badge-pill badge-info">Всего постов: <span class="badge badge-light">{{ posts|length }}</span></span>
+{% for post in posts %}
+        <div>
+            <div class="alert alert-success" role="alert">
+                <span><a href="{{ post.get_absolute_url }}"><i class="fa fa-check-square-o" aria-hidden="true"></i>
+                {{ post.title }}</a></span>
+            </div>
+        </div>
+
+    {% endfor %}
+{% endblock %}
