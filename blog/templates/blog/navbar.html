@@ -1,0 +1,81 @@
+﻿<!-- Static navbar -->
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+  <a class="navbar-brand" href="{% url 'post_list' %}"><span><i class="fa fa-home" aria-hidden="true"></i></span></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="https://rdr.salesdoubler.com.ua/in/offer/2057?aid=74902">Страховка<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Прокат</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Проживание
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="https://www.booking.com/apartments/index.html?aid=1766359">Booking
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+          <a class="dropdown-item" href="#">Airbnb
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+          <a class="dropdown-item" href="https://ad.admitad.com/g/ypaux4mj7f5664137d9b6af3bd8a89/">HotelsCombined
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Билеты на самолёт
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="https://apyecom.com/click/5ccacacfa03594362e78e80e/228601/subaccount/url=example.com">kiwi
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+          <a class="dropdown-item" href="https://ad.admitad.com/g/yk224wdch25664137d9b6acf6f3f63/">tickets
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+
+          <a class="dropdown-item" href="https://n.apsale.net/click/5ccac975a035941a07088e19/121414/228601/subaccount">jetradar
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          автобус
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="https://ad.admitad.com/g/yk224wdch25664137d9b6acf6f3f63/">tickets
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+          <a class="dropdown-item" href="https://rdr.salesdoubler.com.ua/in/offer/1714?aid=74902">inBus
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+          <a class="dropdown-item" href="https://rdr.salesdoubler.com.ua/in/offer/1561?aid=74902">INFOBUS
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+          <a class="dropdown-item" href="https://rdr.salesdoubler.com.ua/in/offer/2046?aid=74902">Flixbus
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          поезд
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="https://rdr.salesdoubler.com.ua/in/offer/884?aid=74902">Proizd
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+          <a class="dropdown-item" href="https://booking.uz.gov.ua/ru/">Ukrzaliznytsya
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+
+          <a class="dropdown-item" href="https://ad.admitad.com/g/yk224wdch25664137d9b6acf6f3f63/">tickets
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+        </div>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0" action="{% url 'post_list' %}">
+      <input class="form-control mr-sm-2" type="search" placeholder="поиск" aria-label="Search" name="search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">поиск</button>
+    </form>
+  </div>
+</nav>

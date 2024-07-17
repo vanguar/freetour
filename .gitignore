@@ -1,0 +1,6 @@
+myvenv/ 
+readmy.docx 
+__pycache__/ 
+*.py[cod] 
+*.sqlite3 
+.DS_Store 

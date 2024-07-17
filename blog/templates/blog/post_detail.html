@@ -1,0 +1,123 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
+    {% include 'breadcrumb.html' %}
+
+    <div class="post">
+        {% if post.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+        {% endif %}
+        <h1 class="title_style">{{ post.title }}</h1>
+        {% if post.image %}
+                    <img class="img-responsive img-rounded img-thumbnail img-fluid" alt="{{post.image}}" src="{{ MEDIA_URL }}{{post.image.url}}" />
+
+        {% endif %}
+        {% autoescape off %}
+            <p>{{ post.text_1|linebreaksbr|urlize }}</p>
+        {% endautoescape %}
+
+        {% if post.screenshot_1 %}
+            <p>
+                <b>Пример бронирования:</b><br><br>
+                <img class="img-responsive img-rounded img-thumbnail img-fluid" alt="{{post.screenshot_1}}" src="{{ MEDIA_URL }}{{post.screenshot_1.url}}" />
+            </p>
+        {% endif %}
+        <br>
+        {% if post.screenshot_2 %}
+            <p>
+                <b>Пример бронирования:</b><br><br>
+                <img class="img-responsive img-rounded img-thumbnail img-fluid" alt="{{post.screenshot_2}}" src="{{ MEDIA_URL }}{{post.screenshot_2.url}}" />
+            </p>
+        {% endif %}
+        <br>
+
+        {% autoescape off %}
+            <p>{{ post.text_2|linebreaksbr|urlize }}<br>
+
+            </p>
+
+        {% endautoescape %}
+
+        {% if post.screenshot_3 %}
+            <p>
+                <b>Пример бронирования:</b><br><br>
+                <img class="img-responsive img-rounded img-thumbnail img-fluid" alt="{{post.screenshot_3}}" src="{{ MEDIA_URL }}{{post.screenshot_3.url}}" />
+            </p>
+        {% endif %}
+        <br>
+
+
+
+        <div class="alert alert-success" role="alert">
+
+            <span class="socnet">
+                <em><b>Искать отели можно через через сервис</b></em><br>
+                <a href="https://rdr.salesdoubler.com.ua/in/offer/2058?aid=74902" class="alert-link">
+                    <i class="fa fa-bed" aria-hidden="true"></i> hotelscombined
+                </a><br>
+                <em>Данный сервисы позволяют сравнить цены по десятку систем бронирования отелей.<br>
+                    Также, для более гибкого отслеживания цены можно воспользоваться альтернативным сервисом</em><br>
+                <a href="https://www.booking.com/apartments/index.html?aid=1766359" class="alert-link">
+                    <i class="fa fa-bed" aria-hidden="true"></i> Booking
+                </a><br>
+
+            </span>
+
+            <hr>
+            <span class="socnet">
+                <em><b>Искать и бронировать авиа билеты можно через поисковики:</b></em><br>
+                <em> Также сервисы помогают легко спланировать путешествие: забронировать по специальным ценам апартаменты или номер
+                    в отелях по всему миру,
+              купить билет на поезд или автобус по Украине и Европе.
+                </em><br>
+                <a href="https://n.apsale.net/click/5ccac975a035941a07088e19/121414/228601/subaccount" class="alert-link">jetradar
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i></a><br>
+                <em>Для более гибкого отслеживания цены можно воспользоваться альтернативными сервисами</em><br>
+          <a href="https://apyecom.com/click/5ccacacfa03594362e78e80d/126480/228601/subaccount" class="alert-link">kiwi
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i></a><br>
+          <a href="https://apyecom.com/click/5ccad723a035941a0103907e/73541/228601/subaccount" class="alert-link">tickets
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i></a><br>
+
+          <a href="https://ad.admitad.com/g/49c113f01e5664137d9b02b3e23ee2/" class="alert-link">onetwotrip
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i></a><br>
+                <em> Постоянные клиенты сервиса <b>onetwotrip</b> получают за каждую покупку бонусы, которыми можно оплачивать последующие заказы,
+                    бесплатные дополнительные услуги и круглосуточную поддержку по телефону и во всех популярных мессенджерах.</em><br>
+
+
+            </span>
+
+            <hr>
+            <span class="usefullinks">
+                <em>Хотите получать актуальную информацию об интересных предложениях от авиакомпаний,
+                автобусных, железнодорожных перевозчиках, от систем бронирования жилья, промоакциях и
+                    других интересных событиях подпишитесь на нашу группу в</em><br>
+                <a href="https://www.fb.me/CheekyTraveler"><i class="fa fa-facebook" aria-hidden="true"></i> facebook</a>
+                <br>
+                <a href="https://t.me/CheekyTraveler"><i class="fa fa-paper-plane" aria-hidden="true"></i> telegram channel</a>
+                <br>
+                <a href="https://www.instagram.com/vzcheeky/?hl=ru"><i class="fa fa-instagram" aria-hidden="true"></i> instagram</a>
+
+            </span>
+        </div>
+        <p><em>Приятного отдыха</em> <i class="fa fa-coffee" aria-hidden="true"></i></p>
+
+
+
+
+
+
+
+        <hr>
+    </div>
+
+
+<!-- Подписка на рассылку новостей. Начало -->
+<!-- Карточка с шапкой и футером -->
+{% include 'subscription_link.html' %}
+<!-- Конец карточки -->
+<!-- Подписка на рассылку новостей. Конец -->
+
+{% endblock %}
