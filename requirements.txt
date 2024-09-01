@@ -18,7 +18,7 @@ cryptography==42.0.8
 decorator==4.4.2
 deep-translator==1.11.4
 distlib==0.3.8
-Django==5.0.7
+Django==5.0.8
 docutils==0.21.2
 docx2pdf==0.1.8
 ffmpeg==1.4
