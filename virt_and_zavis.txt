@@ -1,0 +1,13 @@
+Win + R
+
+cd C:\Users\User\Desktop\freetour
+
+myvenv\Scripts\activate
+
+¬веди python --version или pip list, чтобы убедитьс€, 
+что активировано именно виртуальное окружение.
+
+—охрани текущие зависимости в requirements.txt: ¬веди следующую команду, 
+чтобы перезаписать requirements.txt всеми установленными пакетами:
+
+pip freeze > requirements.txt

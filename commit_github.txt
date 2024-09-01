@@ -1,0 +1,4 @@
+git add runtime.txt   или git add .
+git commit -m "Add runtime.txt to specify Python version"
+
+git push origin master
