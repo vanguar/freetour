@@ -14,7 +14,7 @@ charset-normalizer==3.3.2
 click==8.1.7
 colorama==0.4.6
 comtypes==1.4.5
-cryptography==42.0.8
+cryptography==43.0.1
 decorator==4.4.2
 deep-translator==1.11.4
 distlib==0.3.8
