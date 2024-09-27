@@ -86,8 +86,54 @@ h4 {
 }
 
 .breadcrumb {
-    background: #E0ECF8;
+    background-color: #e9f7fe; /* Нежный светло-голубой фон */
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: flex; /* Flexbox для равномерного размещения */
+    align-items: center;
+    width: 100%; /* Фон на всю ширину */
+    box-sizing: border-box; /* Учитываем padding внутри блока */
+    font-family: Arial, sans-serif;
 }
+
+.breadcrumb-item a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+}
+
+.breadcrumb-item i {
+    color: #6c757d; /* Серый цвет */
+    margin-right: 8px;
+    font-size: 1.5em;
+    transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+.breadcrumb-item a:hover i {
+    color: #b0b0b0; /* Светло-серый цвет при наведении */
+}
+
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: '/';
+    margin: 0 10px;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+.breadcrumb-item.active {
+    color: #6c757d;
+}
+
+.breadcrumb-item.active a {
+    pointer-events: none;
+}
+
+
+
 
 .sh {
     font-family: -apple-system, Roboto, Verdana, sans-serif;
