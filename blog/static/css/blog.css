@@ -1,4 +1,6 @@
-#wrapper{overflow-x:hidden}
+#wrapper {
+    overflow-x: hidden;
+}
 
 .page-header {
     background-color: #ff9400;
@@ -6,16 +8,18 @@
     padding: 20px 20px 20px 40px;
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+.page-header h1,
+.page-header h1 a,
+.page-header h1 a:visited,
+.page-header h1 a:active {
     color: #ffffff;
     font-size: 20px;
     text-decoration: none;
 }
 
-
 .title_style {
     font-family: 'Lobster', cursive;
-    color-text: red;
+    color: #4a4a4a; /* Исправлено свойство на 'color' вместо 'color-text' */
     font-size: 24px;
 }
 
@@ -23,8 +27,11 @@
     margin-left: 40px;
 }
 
-h1, h2, h3, h4 {
-font-family: 'Old Standard TT', serif;
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Old Standard TT', serif;
 }
 
 .date {
@@ -36,13 +43,16 @@ font-family: 'Old Standard TT', serif;
     float: right;
 }
 
+/* Удалена лишняя закрывающая скобка */
 
-}
-.post-form textarea, .post-form input {
+.post-form textarea,
+.post-form input {
     width: 100%;
 }
 
-.top-menu, .top-menu:hover, .top-menu:visited {
+.top-menu,
+.top-menu:hover,
+.top-menu:visited {
     color: #ffffff;
     float: right;
     font-size: 26pt;
@@ -53,152 +63,168 @@ font-family: 'Old Standard TT', serif;
     margin-bottom: 70px;
 }
 
-.post h1 a, .post h1 a:visited {
-   color: black;
+.post h1 a,
+.post h1 a:visited {
+    color: black;
 }
 
 .post h4 a:hover {
-  color: #DC143C;
-  text-decoration: none;
+    color: #DC143C;
+    text-decoration: none;
 }
 
 .post h4 a {
-color:black;
-font-weight: bolder;
+    color: black;
+    font-weight: bolder;
 }
 
 .sticky {
-  position: sticky;
-  top: 0em;
-  min-height: 2em;
-  background: #E0ECF8;
+    position: sticky;
+    top: 0em;
+    min-height: 2em;
+    background: #E0ECF8;
 }
 
 .breadcrumb {
-background: #E0ECF8;
+    background: #E0ECF8;
 }
-
-
 
 .sh {
-font-family: -apple-system, Roboto, Verdana, sans-serif;
-color: #848484;
-text-align: center;
-text-shadow: 0px 2px 3px #666;
+    font-family: -apple-system, Roboto, Verdana, sans-serif;
+    color: #848484;
+    text-align: center;
+    text-shadow: 0px 2px 3px #666;
 }
 
-
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 html,
 body {
-  font-family: 'Times New Roman, Tahoma, serif';
-  font-size: 18px;
+    font-family: 'Times New Roman', Tahoma, serif;
+    font-size: 18px;
 }
 
 .wrapper {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
 }
 
 .content {
-  flex: 1 0 auto;
+    flex: 1 0 auto;
 }
 
-footer, head-block-right {
-  flex: 0 0 auto;
-  background: #fff;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+/* Фиксируем футер внизу экрана */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
 }
 
 footer a {
-  border: 1px solid #ccc;
-  margin: 8px;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  transform: rotate(45deg);
-  color: #ccc;
-  transition: all .3s linear;
+    border: 1px solid #ccc;
+    margin: 8px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    transform: rotate(45deg);
+    color: #ccc;
+    transition: all 0.3s linear;
 }
 
 footer a:hover {
-  border-color: #222;
-  color: #222;
+    border-color: #222;
+    color: #222;
 }
 
 footer a i {
-  transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* Стили для субфутера */
+.subfooter {
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    position: relative;
+    z-index: 999;
+}
+
+/* Отступ для контента, чтобы футер не перекрывал его */
+body {
+    padding-bottom: 100px;
 }
 
 .mountain {
-  width: 60px;
-  height: 20px;
-  background: tomato;
-  background: url(https://media.istockphoto.com/vectors/mountain-icons-and-symbols-vector-id165763529?k=6&m=165763529&s=612x612&w=0&h=STwcHEDryHu0UzMp7IPtOCVKpraffF5LlTubAPCmbxA=);
-  background-position: ;
-  background-size: 360px 150px;
-  position: absolute;
-  top: 80px;
+    width: 73px;
+    height: 20px;
+    background: url(https://media.istockphoto.com/vectors/mountain-icons-and-symbols-vector-id165763529?k=6&m=165763529&s=612x612&w=0&h=STwcHEDryHu0UzMp7IPtOCVKpraffF5LlTubAPCmbxA=) center center no-repeat;
+    background-size: 360px 150px;
+    position: absolute;
+    top: 80px;
+    filter: brightness(1.5); /* Увеличиваем яркость на 50% */
 }
 
 .subfooter {
-  text-align: center;
+    text-align: center;
 }
 
 .subfooter p {
-  color: #777;
+    color: #777;
 }
 
 .pi {
-  text-align: center;
-  color: #777;
-  height: 30px;
-  font-size: 16px;
+    text-align: center;
+    color: #777;
+    height: 30px;
+    font-size: 16px;
 }
 
 .alert-success {
-  background: #FAFAFA;
+    background: #FAFAFA;
 }
 
 .headline-style {
-  background: #F0FFF0; 
+    background: #F0FFF0;
 }
 
 .head-block-right a {
-  color: green;
+    color: green;
 }
 
 .head-block-right a:hover {
-  color: #222;
+    color: #222;
 }
 
-.head-block-right, .hear-block-left {
-  padding-top: 10px;
+.head-block-right,
+.hear-block-left {
+    padding-top: 10px;
 }
-
 
 .hear-block-left {
-   font-size: 24px;
-   color: rgba(0,0,0,0.6);
-   text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
-                 0px -5px 35px rgba(255,255,255,0.3);
+	padding-right:10px;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+        0px -5px 35px rgba(255, 255, 255, 0.3);
 }
 
 a.alert-link:hover {
-  color: #DC143C;
-  text-decoration: none;
+    color: #DC143C;
+    text-decoration: none;
 }
 
 em.from_to {
@@ -206,53 +232,125 @@ em.from_to {
 }
 
 a.navbar-brand img {
-  position:absolute;
-  bottom: -20px;
-  display: block;
-  width: 200px;
-  margin: 0 auto;
+    position: absolute;
+    bottom: -20px;
+    display: block;
+    width: 200px;
+    margin: 0 auto;
 }
 
 .headline-style {
-height: 80px !important;
+    height: 80px !important;
 }
 
-
-hr{ 
-   border: 0; 
-   height: 1px; 
-   background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-   background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-   background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-   background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+hr {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
 }
 
 .kback {
-display: block;
-position:relative;
-left:50px;
+    display: block;
+    position: relative;
+    left: 50px;
 }
 
 .indent {
-top: 10px;
+    top: 10px;
 }
 
-
 .usefullinks a {
-color: black;
-text-decoration: none;
-font-weight: bold;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .usefullinks a:hover {
-color: #DC143C;
-text-decoration: none;
+    color: #DC143C;
+    text-decoration: none;
 }
 
-.navbar-collapse{
- justify-content: flex-end;
+.navbar-collapse {
+    justify-content: flex-end;
 }
 
 .badge {
- margin: 5px;
+    margin: 5px;
 }
+
+/* Убираем подчеркивание и настраиваем цвет иконок */
+.head-block-right a {
+    text-decoration: none;
+    color: #4a4a4a;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+/* Изменяем цвет иконок при наведении */
+.head-block-right a:hover {
+    color: #6c6c6c;
+}
+
+/* Добавляем фиксированное позиционирование блока с иконками в правой части хедлайна */
+.head-block-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+/* Сайдбар */
+.sidebar {
+    position: -webkit-sticky; /* Для поддержки Safari */
+    position: sticky;
+    top: 100px;
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    /* Дополнительные стили по необходимости */
+}
+
+/* Адаптивность: на маленьких экранах сайдбар становится статичным */
+@media (max-width: 767.98px) {
+    .sidebar {
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding: 10px;
+    }
+} /* Добавлена закрывающая скобка для медиа-запроса */
+
+/* Остальные ваши стили */
+
+/* Стили для кнопки */
+.post .button-container {
+    text-align: right;
+    margin-top: -10px;
+}
+
+.post .button-container .btn-gradient {
+	padding: 8px 16px;
+    color: #fff;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    background-size: 200% auto;
+    background-position: left center;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-position 0.4s ease;
+}
+
+.post .button-container .btn-gradient:hover {
+    background-position: right center;
+}
+
+
+
+
+	

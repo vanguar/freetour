@@ -1,27 +1,41 @@
 {% extends 'blog/base.html' %}
 {% block content %}
     {% for post in page_object.object_list %}
-        <div class="post">
-            <div class="date">
-                {{ post.published_date }}
-            </div>
-            {% autoescape off %}
-            <h4 class="t_style"><a href="{{ post.get_absolute_url }}"><i class="fa fa-pull-left fa-paper-plane-o" aria-hidden="true"></i>
-                {{ post.title }}</a></h4>
+ 
+ 
+<div class="post">
+    <div class="date">
+        {{ post.published_date }}
+    </div>
+    {% autoescape off %}
+    <h4 class="t_style">
+        <a href="{{ post.get_absolute_url }}">
+            <i class="fa fa-pull-left fa-paper-plane-o" aria-hidden="true"></i>
+            {{ post.title }}
+        </a>
+    </h4>
 
-                <h6>
-                    <b>Дата:</b>
-                        <span><em class="from_to">{{ post.from_to }}</em></span>
-                </h6>
+    <h6>
+        <b>Дата:</b>
+        <span><em class="from_to">{{ post.from_to }}</em></span>
+    </h6>
 
-            <p class="lead">{{ post.text_1|linebreaksbr|truncatewords:25 }}</p>
-            {% endautoescape %}
-        </div>
+    <p class="lead">{{ post.text_1|linebreaksbr|truncatewords:25 }}</p>
+
+    <!-- Добавляем кнопку здесь -->
+    <div class="button-container">
+        <button class="btn-gradient" onclick="location.href='{{ post.get_absolute_url }}'">Перейти</button>
+    </div>
+    {% endautoescape %}
+</div>
+
+
 
     {% endfor %}
 
 <div class="alert alert-success" role="alert">
-  Хотите посмотреть <a href="{% url 'fulllist' %}" class="alert-link"><i class="fa fa-link" aria-hidden="true"></i> весь список постов?</a> Просто перейдите по ссылке!
+  Хотите посмотреть <a href="{% url 'fulllist' %}" class="alert-link"><i class="fa fa-link" aria-hidden="true"></i> весь список постов?</a> Просто перейдите 
+  по ссылке!
 </div>
 <hr class="style17">
 <!-- Подписка на рассылку новостей. Начало -->

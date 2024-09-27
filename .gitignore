@@ -1,6 +1,16 @@
 myvenv/ 
-readmy.docx 
 __pycache__/ 
 *.py[cod] 
 *.sqlite3 
 .DS_Store 
+
+# Файлы, которые ты, вероятно, не хочешь загружать
+commit_github.txt
+deploy_reg.txt
+log_and_pas.txt
+virt_and_zavis.txt
+
+# Обычно эти файлы загружаются в репозиторий, поэтому их можно удалить из .gitignore, если ты хочешь их отслеживать
+# readmy.docx
+# requirements.txt
+# runtime.txt
