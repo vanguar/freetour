@@ -8,14 +8,22 @@ from django import forms
 class Post(models.Model):
     objects = None
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    image = models.ImageField(verbose_name=u'Фотография', upload_to='img/%Y/%m/%d', help_text='150x150px', default="",
-                                     blank=True)
+    image = models.ImageField(verbose_name=u'Фотография', upload_to='img/%Y/%m/%d', help_text='150x150px',
+                                     blank=True,
+                                     null=True
+                                     )
     screenshot_1 = models.ImageField(verbose_name=u'Скриншот_1', upload_to='img/%Y/%m/%d', help_text='150x150px',
-                                     default="", blank=True)
+                                     blank=True,
+                                     null=True
+                                     )
     screenshot_2 = models.ImageField(verbose_name=u'Скриншот_2', upload_to='img/%Y/%m/%d', help_text='150x150px',
-                                     default="", blank=True)
+                                     blank=True,
+                                     null=True
+                                     )
     screenshot_3 = models.ImageField(verbose_name=u'Скриншот_3', upload_to='img/%Y/%m/%d', help_text='150x150px',
-                                     default="", blank=True)
+                                     blank=True,
+                                     null=True
+                                     )
     title = models.CharField(verbose_name=u'Описание', max_length=200, db_index=True)
     slug = models.SlugField(verbose_name=u'ЧПУ', max_length=200, unique=True)
     price = models.CharField(verbose_name=u'Цена', max_length=200, db_index=True, blank=True)
