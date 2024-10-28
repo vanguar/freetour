@@ -46,8 +46,8 @@ class WWWRedirectMiddleware:
 
     def __call__(self, request):
         host = request.get_host()
-        if host == 'hotpies.click':
-            return HttpResponsePermanentRedirect(f'https://www.hotpies.click{request.get_full_path()}')
+        if host == 'freetour.pro':
+            return HttpResponsePermanentRedirect(f'https://www.freetour.pro{request.get_full_path()}')
         return self.get_response(request)
 
 MIDDLEWARE = [
