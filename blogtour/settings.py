@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+from django.http import HttpResponsePermanentRedirect  # Додано імпорт для перенаправлення
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -38,6 +39,17 @@ INSTALLED_APPS = [
     'blog',
 ]
 
+# Define the WWWRedirectMiddleware
+class WWWRedirectMiddleware:
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        host = request.get_host()
+        if host == 'hotpies.click':
+            return HttpResponsePermanentRedirect(f'https://www.hotpies.click{request.get_full_path()}')
+        return self.get_response(request)
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -46,7 +58,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'blogtour.settings.WWWRedirectMiddleware',  # Add the custom middleware here
 ]
+
 
 ROOT_URLCONF = 'blogtour.urls'
 
