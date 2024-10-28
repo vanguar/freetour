@@ -44,13 +44,14 @@ from .middlewares import WWWRedirectMiddleware
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'blogtour.middlewares.WWWRedirectMiddleware',  # Добавлено ваше middleware
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'blogtour.middlewares.WWWRedirectMiddleware',  # Добавлено ваше middleware
+    
 ]
 
 
