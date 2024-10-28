@@ -25,7 +25,7 @@ SECRET_KEY = '$lv^$h6t%ed)wplt&^-+^9^fq7701uu9a@pm87f_fk)hy50#h2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['freetourua.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['www.freetour.pro', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
