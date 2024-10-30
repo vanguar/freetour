@@ -9,6 +9,9 @@ commit_github.txt
 deploy_reg.txt
 log_and_pas.txt
 virt_and_zavis.txt
+deploy_pythonanywhere.docx
+Cloudflare.docx
+payDomens.txt
 
 # Обычно эти файлы загружаются в репозиторий, поэтому их можно удалить из .gitignore, если ты хочешь их отслеживать
 # readmy.docx

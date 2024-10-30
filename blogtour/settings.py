@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$lv^$h6t%ed)wplt&^-+^9^fq7701uu9a@pm87f_fk)hy50#h2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['freetourua.pythonanywhere.com', '127.0.0.1', 'www.freetour.pro', 'freetour.pro']
 # Application definition
@@ -44,7 +44,7 @@ from .middlewares import WWWRedirectMiddleware
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'blogtour.middlewares.WWWRedirectMiddleware',  # Добавлено ваше middleware
+    #'blogtour.middlewares.WWWRedirectMiddleware',  # Добавлено ваше middleware
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
