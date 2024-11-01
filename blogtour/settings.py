@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$lv^$h6t%ed)wplt&^-+^9^fq7701uu9a@pm87f_fk)hy50#h2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['freetourua.pythonanywhere.com', '127.0.0.1', 'www.freetour.pro', 'freetour.pro']
 # Application definition
